@@ -6,3 +6,10 @@
 2025-11-10 17:58:46: 👥 Usuarios a notificar: 106, 105
 2025-11-10 17:58:47: [10/11/2025, 5:58:47 p. m.] Cliente desconectado: ywswxm84MB4QdosHAAAF
 2025-11-10 18:03:50: [10/11/2025, 6:03:50 p. m.] Servidor activo en puerto 4001
+2025-11-11 14:12:39: [11/11/2025, 2:12:39 p. m.] 🚀 Servidor WebSocket ejecutándose en puerto 4001
+2025-11-11 14:12:39: 📍 Accesible en: http://localhost:4001
+2025-11-11 14:12:39: 🌐 Accesible desde red: http://TU-IP:4001
+2025-11-11 14:14:20: [11/11/2025, 2:14:20 p. m.] 📨 Evento recibido desde Laravel: notifyTaskCreated
+2025-11-11 14:14:20: 👥 Usuarios a notificar: 106, 55
+2025-11-11 14:29:40: [11/11/2025, 2:29:40 p. m.] Cliente desconectado: 809Jff6Z3v79wO5rAAAB
+2025-11-11 14:51:40: [11/11/2025, 2:51:40 p. m.] Cliente desconectado: uVAz3Y9wrrgwXQJEAAAD
