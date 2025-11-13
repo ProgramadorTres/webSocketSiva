@@ -1,9 +1,6 @@
 // ecosystem.config.js
-
-/*
 module.exports = {
-  apps: [
-    {
+  apps: [{
      name: "socket_fpn",
     script: "./index.js",
     instances: 1,
@@ -29,39 +26,4 @@ module.exports = {
     max_restarts: 10,
     min_uptime: "10s"
   }]
-};*/
-
-module.exports = {
-  apps: [
-    {
-      name: "socket_fpn",
-      script: "index.js",
-      env: {
-        NODE_ENV: "development",
-        PORT: 4001,
-        APP_NAME: "socket_fpn_dev",
-        CORS_ORIGIN: "*"
-      },
-      env_test: {
-        NODE_ENV: "test",
-        PORT: 4001,
-        APP_NAME: "socket_fpn_test",
-        CORS_ORIGIN: "https://sivarem2.patrimonionatural.org.co",
-
-        // 🔐 Certificados SSL de sivarem2
-        SSL_KEY_PATH: "/etc/letsencrypt/live/sivarem2.patrimonionatural.org.co/privkey.pem",
-        SSL_CERT_PATH: "/etc/letsencrypt/live/sivarem2.patrimonionatural.org.co/fullchain.pem"
-      },
-      env_production: {
-        NODE_ENV: "production",
-        PORT: 4001,
-        APP_NAME: "socket_fpn_prod",
-        CORS_ORIGIN: "https://sivarem3.patrimonionatural.org.co",
-
-        // 🔐 Certificados SSL de sivarem3
-        SSL_KEY_PATH: "/etc/letsencrypt/live/sivarem3.patrimonionatural.org.co/privkey.pem",
-        SSL_CERT_PATH: "/etc/letsencrypt/live/sivarem3.patrimonionatural.org.co/fullchain.pem"
-      }
-    }
-  ]
 };

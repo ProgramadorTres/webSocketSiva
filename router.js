@@ -26,7 +26,7 @@ const createRouter = (io) => {
                             task_id: data.task_id,
                             type: 'task_created'
                         });
-                        //console.log(`Notificación enviada a usuario ${userId}`);
+                        console.log(`Notificación enviada a usuario ${userId}`);
                     }
                 });
             } else {
@@ -34,7 +34,11 @@ const createRouter = (io) => {
                 io.emit(event, data);
             }
             
+
+            console.log(`Evento ${event} procesado correctamente`)
             res.json({ 
+                
+                
                 success: true, 
                 message: `Evento ${event} procesado correctamente` 
             });

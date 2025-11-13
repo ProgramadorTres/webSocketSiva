@@ -3,16 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-      "start": "node index.js",
-      "dev": "pm2 start ecosystem.config.js --env development",
-      "test": "pm2 start ecosystem.config.js --env test",
-      "prod": "pm2 start ecosystem.config.js --env production",
-      "stop": "pm2 stop socket_fpn",
-      "restart": "pm2 restart socket_fpn",
-      "delete": "pm2 delete socket_fpn",
-      "logs": "pm2 logs socket_fpn",
-      "status": "pm2 status",
-      "monitor": "pm2 monit"
+    "start": "node index.js",
+    "dev": "pm2 start ecosystem.config.js --env development",
+    "prod": "pm2 start ecosystem.config.js --env production",
+    "stop": "pm2 stop socket_fpn",
+    "restart": "pm2 restart socket_fpn",
+    "delete": "pm2 delete socket_fpn",
+    "logs": "pm2 logs socket_fpn",
+    "status": "pm2 status",
+    "monitor": "pm2 monit",
+    "dev:log": "cross-env NODE_ENV=development PORT=4001 CORS_ORIGIN='*' node index.js",
+
+
+    "prod:log": "NODE_ENV=production PORT=4001 CORS_ORIGIN=https://sivarem2.patrimonionatural.org.co SSL_KEY_PATH=/etc/letsencrypt/live/sivarem2.patrimonionatural.org.co/privkey.pem SSL_CERT_PATH=/etc/letsencrypt/live/sivarem2.patrimonionatural.org.co/fullchain.pem node index.js",
+    
+    "test:log": "NODE_ENV=production PORT=4001 CORS_ORIGIN=https://sivarem3.patrimonionatural.org.co SSL_KEY_PATH=/etc/letsencrypt/live/sivarem3.patrimonionatural.org.co/privkey.pem SSL_CERT_PATH=/etc/letsencrypt/live/sivarem3.patrimonionatural.org.co/fullchain.pem node index.js"
+
+
+
   },
   "keywords": [],
   "author": "Feibian",
@@ -21,5 +29,8 @@
   "dependencies": {
     "express": "^5.1.0",
     "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }
